@@ -1,9 +1,24 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
+import Card from './Card';
+import './List.css';
 
-export class List extends React.Component {
+class List extends React.Component {
   render() {
-    return <h1>Hello</h1>
+    const cards = this.props.cards.map((card) => {
+      return <Card title={card.title} content={card.content} key={card.id} />
+    });
+    
+    return (
+      <section className="List">
+        <header className="List-header">
+          <h2>{this.props.header}</h2>
+        </header>
+        <div className="List-cards">
+          {cards}
+        </div>
+      </section>
+    )
   }
 }
 
+export default List;

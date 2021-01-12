@@ -1,4 +1,4 @@
-const STORE = {
+export const STORE = {
   lists: [
     {
       id: '1',

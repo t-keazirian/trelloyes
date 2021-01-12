@@ -1,12 +1,17 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
+import './Card.css';
 
-export class Card extends React.Component {
+class Card extends React.Component {
   render() {
-    const title = this.title;
-    const content = this.content;
-    
-    return console.log(this.title)
+    return (
+      <div className="Card">
+        <button type="button">delete</button>
+        <h3>{this.props.title}</h3>
+        <p>{this.props.content}</p>
+      </div>
+    );
   }
 }
+
+export default Card;
 
