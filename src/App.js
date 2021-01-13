@@ -4,26 +4,16 @@ import './App.css';
 
 function App(props) {
 
-  // const lists = [];
-  
-  // for(let i=0; i < props.store.lists.length; i++) {
-  //   const cards = [];
-
-  //   for (let j=0; j < props.store.lists[i].cardIds.length; j++) {
-  //     cards.push(props.store.allCards[props.store.lists[i].cardIds[j]]);
-  //   }
-
-  //   lists.push(<List header={props.store.lists[i].header} cards={cards} key={props.store.lists[i].id} />);
-  // }
+  console.log(props)
   
   const lists = props.store.lists.map(list => {
-    console.log('lists');
-    console.log(list);
+    // console.log('lists');
+    // console.log(list);
 
     // Create an array of objects grabbed from the allCards property in the STORE
-    console.log('cardIds');
+    // console.log('cardIds');
     let cards = list.cardIds.map(id => {
-      console.log(id);
+      // console.log(id);
       return props.store.allCards[id]
     });
     

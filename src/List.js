@@ -7,7 +7,7 @@ class List extends React.Component {
     const cards = this.props.cards.map((card) => {
       return <Card title={card.title} content={card.content} key={card.id} />
     });
-    
+
     return (
       <section className="List">
         <header className="List-header">
